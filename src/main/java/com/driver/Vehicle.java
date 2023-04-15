@@ -22,6 +22,10 @@ public class Vehicle {
         this.currentDirection = 0;
     }
 
+    public String getName(){
+        return name;
+    }
+
     public void steer(int direction){
         //direction is in degrees, add it to the current direction
         currentDirection += direction;
@@ -38,6 +42,14 @@ public class Vehicle {
     public void stop(){
         this.currentSpeed = 0;
         System.out.println("stop method called - The vehicle is stopped");
+    }
+
+    public int getCurrentDirection() {
+        return currentDirection;
+    }
+
+    public int getCurrentSpeed() {
+        return currentSpeed;
     }
 
 }
