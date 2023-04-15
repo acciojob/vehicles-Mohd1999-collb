@@ -35,8 +35,7 @@ public class F1 extends Car {
         }
         //for all other cases, change the gear accordingly
         if(newSpeed > 0) {
-            // changeSpeed(newSpeed, getCurrentDirection());
-            changeSpeed(newSpeed, 30);
+            changeSpeed(newSpeed, getCurrentDirection());
             if (newSpeed >= 1 && newSpeed <= 50) {
                 ca.changeGear(1);                
             }else if(newSpeed >= 51 && newSpeed <= 100){
@@ -53,8 +52,8 @@ public class F1 extends Car {
         }
     }
 
-    // public int getCurrentDirection(){
-    //     Vehicle vh = new Vehicle("Talib");
-    //     return vh.currentDirection;
-    // }
+    public int getCurrentDirection(){
+        Vehicle vh = new Vehicle("Talib");
+        return vh.currentDirection;
+    }
 }
