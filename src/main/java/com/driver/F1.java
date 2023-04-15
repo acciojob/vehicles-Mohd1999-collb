@@ -23,8 +23,8 @@ public class F1 extends Car {
          * speed 201-250: gear 5
          * speed more than 250: gear 6
          */
-        Vehicle vh = new Vehicle();
-        Car ca = new Car();
+        Vehicle vh = new Vehicle("Talib");
+        Car ca = new Car("Sidd", 2, 4, 5, true, "Autometic", 5);
 
         newSpeed = vh.currentSpeed + rate;
 
@@ -50,5 +50,10 @@ public class F1 extends Car {
                 ca.changeGear(6);
             }
         }
+    }
+
+    public int getCurrentDirection(){
+        Vehicle vh = new Vehicle("Talib");
+        return vh.currentDirection;
     }
 }
