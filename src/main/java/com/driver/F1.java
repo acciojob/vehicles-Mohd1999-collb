@@ -23,37 +23,36 @@ public class F1 extends Car {
          * speed 201-250: gear 5
          * speed more than 250: gear 6
          */
-        Vehicle vh = new Vehicle("Talib");
-        Car ca = new Car("Sidd", 2, 4, 5, true, "Autometic", 5);
+        // Vehicle vh = new Vehicle("Talib");
+        // Car ca = new Car("Sidd", 2, 4, 5, true, "Autometic", 5);
 
-        newSpeed = vh.currentSpeed + rate;
+        newSpeed = super.currentSpeed + rate;
 
         if(newSpeed == 0) {
             //Stop the car, set gear as 1
-            vh.stop();
-            ca.changeGear(1); 
+            super.stop();
+            super.changeGear(1); 
         }
         //for all other cases, change the gear accordingly
         if(newSpeed > 0) {
             changeSpeed(newSpeed, getCurrentDirection());
             if (newSpeed >= 1 && newSpeed <= 50) {
-                ca.changeGear(1);                
+                super.changeGear(1);                
             }else if(newSpeed >= 51 && newSpeed <= 100){
-                ca.changeGear(2); 
+                super.changeGear(2); 
             }else if(newSpeed >= 101 && newSpeed <= 150){
-                ca.changeGear(3); 
+                super.changeGear(3); 
             }else if(newSpeed >= 151 && newSpeed <= 200){
-                ca.changeGear(4); 
+                super.changeGear(4); 
             }else if(newSpeed >= 201 && newSpeed <= 250){
-                ca.changeGear(5); 
+                super.changeGear(5); 
             }else{
-                ca.changeGear(6);
+                super.changeGear(6);
             }
         }
     }
 
     public int getCurrentDirection(){
-        Vehicle vh = new Vehicle("Talib");
-        return vh.currentDirection;
+        return super.currentDirection;
     }
 }

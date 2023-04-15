@@ -1,6 +1,4 @@
 package com.driver;
-
-
 /*Car: extends Vehicle
 
     1. constructor: initialize the variables using parameters and set currentGear as 1.
@@ -36,8 +34,9 @@ public class Car extends Vehicle {
     }
 
     public void changeSpeed(int newSpeed, int newDirection){
-        Vehicle obj = new Vehicle("Talib");
-        obj.move(newSpeed, newDirection);
+        // Vehicle obj = new Vehicle("Talib");
+        // obj.move(newSpeed, newDirection);
+        super.move(newSpeed, newDirection);
         System.out.println("changeSpeed method called - The speed is changed to: " + newSpeed + ", and the direction is changed to: " + newDirection + " degrees");
     }
 }
